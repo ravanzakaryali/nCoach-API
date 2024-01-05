@@ -1,0 +1,1 @@
+{"version":3,"file":"HomeController.js","sourceRoot":"","sources":["../../../../app/Controllers/Http/HomeController.ts"],"names":[],"mappings":";;AAIA,MAAqB,cAAc;IAC1B,KAAK,CAAC,KAAK,CAAE,GAAwB;QAQ1C,OAAO,GAAG,CAAC,QAAQ;aAClB,MAAM,CAAC,GAAG,CAAC;aACX,IAAI,CAAC,EAAC,MAAM,EAAC,CAAC,EAAC,SAAS,EAAC,cAAc,EAAC,CAAC,EAAC,CAAC,CAAA;IAE9C,CAAC;CACF;AAdD,iCAcC"}

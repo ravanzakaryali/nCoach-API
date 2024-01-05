@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>nCoach Email</title>
+    <style>
+      * { margin: 0; padding: 0; font-size: 16px; color: #000; font-family: Helvetica,Arial,sans-serif!important; }
+      .mt-1 { margin-top: 4px; }
+      .mt-2 { margin-top: 8px; }
+      .mt-4 { margin-top: 16px; }
+      .mt-6 { margin-top: 24px; }
+      .mt-8 { margin-top: 32px; }
+      .mb-1 { margin-bottom: 4px; }
+      .mb-2 { margin-bottom: 8px; }
+      .mb-4 { margin-bottom: 16px; }
+      .mb-6 { margin-bottom: 24px; }
+      .mb-8 { margin-bottom: 32px; }
+      .ml-1 { margin-left: 4px; }
+      .ml-2 { margin-left: 8px; }
+      .ml-4 { margin-left: 16px; }
+      .ml-6 { margin-left: 24px; }
+      .ml-8 { margin-left: 32px; }
+      .mr-1 { margin-right: 4px; }
+      .mr-2 { margin-right: 8px; }
+      .mr-4 { margin-right: 16px; }
+      .mr-6 { margin-right: 24px; }
+      .mr-8 { margin-right: 32px; }
+      .pb-1 { padding-bottom: 4px; }
+      .pb-2 { padding-bottom: 8px; }
+      .pb-4 { padding-bottom: 16px; }
+      .pb-6 { padding-bottom: 24px; }
+      .pb-8 { padding-bottom: 32px; }
+      .pt-1 { padding-top: 4px; }
+      .pt-2 { padding-top: 8px; }
+      .pt-4 { padding-top: 16px; }
+      .pt-6 { padding-top: 24px; }
+      .pt-8 { padding-top: 32px; }
+      .pl-1 { padding-left: 4px; }
+      .pl-2 { padding-left: 8px; }
+      .pl-4 { padding-left: 16px; }
+      .pl-6 { padding-left: 24px; }
+      .pl-8 { padding-left: 32px; }
+      .pr-1 { padding-right: 4px; }
+      .pr-2 { padding-right: 8px; }
+      .pr-4 { padding-right: 16px; }
+      .pr-6 { padding-right: 24px; }
+      .pr-8 { padding-right: 32px; }
+      .fw-bold { font-weight: bold; }
+      .fw-700 { font-weight: 700; }
+      .fw-600 { font-weight: 600; }
+      .fw-500 { font-weight: 500; }
+      .fw-400 { font-weight: 400; }
+      .fw-normal { font-weight: normal; }
+      .inline-block { display: inline-block; }
+      .block { display: block; }
+      .right-0 { position: absolute; right: 0; }
+      p { font-size: 18px; line-height: 28px; }
+      .price-info { font-size: 20px; color: #7E7E7E; }
+      .wrapper { width: 472px; text-align: left; padding: 45px 64px 32px 64px; border-bottom: 1px solid #C1CFCA; }
+      .wrapper.lineless { border: 0; padding-top: 16px; position: relative; }
+      .header { font-size: 24px; }
+      .header-alternative { font-size: 20px; color: #222222; line-height: 30px; }
+      .title { font-size: 18px; line-height: 27px; }
+      .info-wrapper { border-left: 2px solid #004b81; }
+      .info-wrapper .subtitle { font-size: 18px; line-height: 28px; }
+      .button { padding: 15px 48px; border: 0; border-radius: 50px; background: #004b81; color: #FFF !important; }
+      .button.primary { background: #004b81;}
+      .button.danger { background: #E12D39;}
+      .button.secondary { border: 1px solid #004b81; background: #FFF !important; color: #004b81 !important; }
+      .button.newprimary { background: #3488FA; padding: 12px 18px; border-radius: 8px; }
+      a {line-height: 24px; color: #004b81 !important; text-decoration: none; }
+      .fine-print, .fine-print a { font-size: 14px; line-height: 21px; }
+      .pre-line { white-space: pre-line; }
+      .booking-message {font-size: 14px; line-height: 21px; color: #222222; }
+      .booking-message-title {font-size: 16px; line-height: 24px; color: #2A2E32; }
+      .reminder-warning-text { color: #494949; }
+      .reminder-date-box { background-color: #F0F7FF; border-radius: 10px; padding: 16px 24px }
+      .small-text { font-size: 16px; }
+      .text-link { font-size: 18px; }
+      .event-duration { color: #cfcfcf; }
+      .smaller-text { font-size: 14px; }
+      .info { font-size: 12px; color: #98A3B6; }
+      .message-wrapper { background: #F4F7FA; border-radius: 8px; padding: 16px; overflow-wrap: break-word; }
+      .new-primary-color { color: #3488FA; }
+      .image-fit { width: 100%; height: 100%; max-height: 270px; object-fit: cover; }
+      .image-container { max-height: 270px; overflow: hidden; border-radius: 8px; }
+      .info-description { display: -webkit-box; -webkit-line-clamp: 3!important; -webkit-box-orient: vertical !important; overflow: hidden; }
+      .smaller-text-alternative { font-size: 14px; color: #6A758A; }
+      .gray { color: #6A758A }
+      .gray-50 {color: #98A3B6; }
+      .bg-gray-90 {background: #F7F7F7; }
+      .gray-90 {color: #222222; }
+      .booking-question { font-size: 14px;color: #9E9E9E; }
+      .booking-answer { font-size: 14px; color: #222222; }
+      .price-content-wrapper { background-color: #F4F7FA; padding: 16px 24px; border-radius: 8px; }
+      .price-title { color: #2A2E32; }
+      .price-detail { color: #222222; }
+      .text-cut-line { text-decoration-line: line-through;  }
+      .smaller-text-link { font-size: 12px; color: #6A758A !important; text-decoration: underline; }
+      .wrapper-unsubscribe { width: 472px; text-align: left; padding: 24px 64px; border-bottom: 1px solid #C1CFCA; }
+      .smaller-text-alternative-unsubscribe { font-size: 12px; color: #6A758A; }
+      .green-70 { color: #219830; }
+      .old-rev-share { position: relative; color: #98A3B6; font-size: 24px; }
+      .old-rev-share::after { position: absolute; left: 0; top: 50%; height: 1px; background: #98A3B6 ;content: ""; width: 100%;  display: block; margin-top: 1px; }
+      .rev-share { font-size: 24px; color: #222222;}
+      .arrow { position: absolute; padding-top: 5px; }
+      .lowercase { text-transform: lowercase; }
+      .space-mt-40 {margin-top: 40px}
+      .space-mt-35 {margin-top: 35px}
+      .stream-title {font-size: 16px; line-height: 24px; color:#2769CB;}
+      .host-name {font-size: 14px !important; line-height: 21px !important; color: #6A758A !important; font-weight: 500 !important; }
+      .rounded { border-radius: 100%; }
+      .rounded-md { border-radius: 8px }
+      .discord { color: #5865F2; }
+      .button.discord { background: #5865F2; border-radius: 8px; }
+      .discord-avatar-placeholder { float: left; display: inline-block; margin: 20px 12px 20px 16px; width: 48px; height: 48px; background-size: cover; border-radius: 100%; }
+      .discord-icon { width: 25px; height: 25px; float: right; }
+      .clear { clear: both; }
+      .float-left { float: left; }
+      .float-right { float: right; }
+      .discord-button { border-radius: 8px; color: #FFF !important; background: #5865F2; margin-top: 22px; margin-right: 16px; padding: 8px 38px; }
+      .discord-join-text { display: inline-grid; margin-top: 22px }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!--<img src="https://ncoach.org/logo/logo-notext.png" width="40" />-->
+      <h2>nCoach</h2>
+      
+      <h1 class="header pt-2 pb-8">
+        Sevgili {{name}}, Neredeyse Tamam!
+      </h1>
+      <p class="pb-4">
+        Lütfen e-posta adresinizi doğrulamak ve başlamak için profilinizin kurulumunu tamamlayın. Sadece birkaç dakika sürecek.
+      </p>
+      <p class="pb-4">
+        Sizi nCoach ailesine davet etmek için sabırsızlanıyoruz.
+      </p>
+      <p class="pb-4">
+        <b>Doğrulama Kodu:</b>
+      </p>
+      <div class="button primary inline-block mb-6 fw-bold header">{{verify_code}}</div>
+<!--  
+      <p class="small fw-bold mt-2 mb-4">
+        nCoach
+      </p> -->
+    </div>
+      <div class="wrapper lineless">
+        <p class="fine-print pb-8">
+          Sorularınız mı var veya yardıma mı ihtiyacınız var? 
+          <a href="https://help.ncoach.org">SSS</a> 'lerimize göz atın,
+          veya bize e-posta gönderin 
+          <a href="mailto:info@ncoach.org">
+            info@ncoach.org
+          </a>
+        </p>
+        <!-- <p class="fine-print inline-block">
+          <a href="https://ncoach.com/ncoach-tos">Terms of Service</a>
+          and
+          <a href="https://ncoach.com/ncoach-privacy-policy">
+Privacy Policy</a>
+        </p> -->
+        <p class="fine-print inline-block right-0 pr-8 mr-8">
+          nCoach 2022
+        </p>
+        <div class="social-media space-mt-35">
+        </div>
+      </div>
+  </body>
+</html>
